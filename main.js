@@ -1,5 +1,5 @@
 import { tick } from './js/clock'
-import { glow } from './js/glow'
+// import { glow } from './js/glow'
 
 // remove annoying whitespace (allows readable-ish html)
 document
@@ -9,4 +9,4 @@ document
 tick()
 setInterval(() => tick(), 1000)
 
-glow()
+// glow()

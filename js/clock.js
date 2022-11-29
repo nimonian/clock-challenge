@@ -1,5 +1,5 @@
 export const tick = () => {
-  const time = new Date('Tue Nov 29 2022 18:32:30 GMT+0000 (Greenwich Mean Time)')
+  const time = new Date()
   // console.log(time)
 
   const [hour, minute, second] = [
@@ -44,13 +44,13 @@ const updateDatetime = (hour, minute, second) => {
     )
 }
 
-const updatePreposition = (minute, roundedMinute) => {
+const updatePreposition = (roundedMinute) => {
   document
     .querySelector('.past')
-    .classList.toggle('active', roundedMinute && roundedMinute <= 30)
+    .classList.toggle('active', roundedMinute && (roundedMinute <= 30))
   document
     .querySelector('.to')
-    .classList.toggle('active', roundedMinute && roundedMinute >= 35)
+    .classList.toggle('active', roundedMinute && (roundedMinute >= 35))
   document.querySelector('.oclock').classList.toggle('active', !roundedMinute)
 }
 
